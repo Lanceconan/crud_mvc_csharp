@@ -30,29 +30,42 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.NombreCompleto)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.apellido)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.fechaNacimiento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.peso)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.altura)
-        </td>
-        <td>
-            @Html.ActionLink("Editar", "Edit", new { id=item.id }) |
-            @Html.ActionLink("Detalles", "Details", new { id=item.id }) |
-            @Html.ActionLink("Eliminar", "Delete", new { id=item.id })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NombreCompleto)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.apellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.fechaNacimiento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.peso)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.altura)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.id }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.id }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.id }, new { @class = "aElimina" })
+            </td>
+        </tr>
+    }
 
 </table>
+
+@section scripts{
+
+    <script>
+        $(".aElimina").click(function () {
+            if (!confirm('¿Estás seguro que deseas eliminar el registro?')) {
+                event.preventDefault();
+            }
+        });
+    </script>
+
+}

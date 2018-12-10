@@ -1,3 +1,9 @@
+/***
+
+Crear una Base de datos llamada testDataBase como sugerencia
+
+***/
+
 USE [testDataBase]
 GO
 

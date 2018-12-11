@@ -137,9 +137,11 @@
     <Compile Include="Controllers\EnfermedadController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PacienteController.cs" />
+    <Compile Include="Controllers\PacienteEnfermedadController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\PacienteEnfermedadCE.cs" />
     <Compile Include="Models\enfermedad.cs">
       <DependentUpon>Pacientes.tt</DependentUpon>
     </Compile>
@@ -228,6 +230,12 @@
     <Content Include="Views\Enfermedad\Index.cshtml" />
     <Content Include="Views\Enfermedad\Create.cshtml" />
     <Content Include="Views\Enfermedad\Edit.cshtml" />
+    <Content Include="Views\PacienteEnfermedad\Index.cshtml" />
+    <Content Include="Views\PacienteEnfermedad\Create.cshtml" />
+    <Content Include="Views\PacienteEnfermedad\ListaPacientes.cshtml" />
+    <Content Include="Views\PacienteEnfermedad\ListaEnfermedad.cshtml" />
+    <Content Include="Views\PacienteEnfermedad\Edit.cshtml" />
+    <Content Include="Views\PacienteEnfermedad\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

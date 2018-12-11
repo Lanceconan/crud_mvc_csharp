@@ -1,0 +1,35 @@
+﻿@model CRUD_Alumnos.Models.enfermedad
+
+@{
+    ViewBag.Title = "Detalles de la Enfermedad";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detalles de la Enfermedad</h2>
+
+<div>
+    <h4>enfermedad</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Enfermedad1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Enfermedad1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Descripción)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Descripción)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Volver al Listado", "Index")
+</p>
